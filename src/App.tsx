@@ -367,9 +367,9 @@ export default function App() {
               )}
             </AnimatePresence>
           } />
-          <Route path="/girl-pho" element={<CategoryGallery title="Girl Phố Cá Tính" images={['/girl-pho1.jpg', '/girl-pho2.jpg']} />} />
-          <Route path="/summer-girl" element={<CategoryGallery title="Summer Girl" images={['/girl-pho3.jpg', '/girl-pho4.jpg']} />} />
-          <Route path="/anime-girl" element={<CategoryGallery title="Anime's Girl" images={['/girl-pho5.jpg', '/girl-pho6.jpg']} />} />
+          <Route path="/girl-pho" element={<CategoryGallery title="Girl Phố Cá Tính" images={['/girl-pho1.jpg', '/girl-pho2.jpg', '/girl-pho3.jpg', '/girl-pho4.jpg', '/girl-pho5.jpg', '/girl-pho6.jpg']} />} />
+          <Route path="/summer-girl" element={<CategoryGallery title="Summer Girl" images={[]} />} />
+          <Route path="/anime-girl" element={<CategoryGallery title="Anime's Girl" images={[]} />} />
         </Routes>
       </main>
 
