@@ -29,7 +29,7 @@ const Hero = ({ onExplore }: { onExplore: () => void }) => (
     <div className="absolute inset-0 z-0">
       <img 
         className="w-full h-full object-cover scale-110 brightness-[0.3] contrast-[1.1]" 
-        src="https://lh3.googleusercontent.com/aida/ADBb0uiYOhZdm3T6qQ0Atsa9S5o4R4fcUPj6Lor6FhnmQqE5Y5NkHshkfFwuUv6qdcaSrleWeD3BQH7MkAzyZ8ArTMBIsloc1QlRfRQRCj-SelaETcHgWmQx0Y1EYFDNDRUebLl16WedE1CRpQiQCB6HzpK6ltyNkSqrd3fhJBtGrKnINNkb4mTPVihlppTRHjDPpAo0_0R6cZBdLmRExLHQlvzfEsDDbzvbt33sEyJ5GbvSX48bEtxHBWbuwtc-7HSbprz_oMCZYogFaQ"
+        src="/girl-pho1.jpg"
         alt="Hero Background"
         referrerPolicy="no-referrer"
       />
@@ -86,7 +86,7 @@ const BentoGrid = () => (
       <div className="group relative aspect-[4/5] bg-stone-900 overflow-hidden">
         <img 
           className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" 
-          src="https://lh3.googleusercontent.com/aida/ADBb0uiI5uD-cdd2P7zJNFvuRXjF65xBpsL4e1ucRIx0Z8lhVWAcv5k2NXgZ9IHHjaAzyNJiB8cLo2Z59R_Knz8o-D0iXb_Nb4YaKBNflRWQJ2Bwy_onSQOKE9kWBfIm8FoeGSR0k3vROZy69lXrZqKT731t2bu_7icfABoCQ2R_Omj_Vj1sH18bk7FJImgaD093dzGvU8nr50DSXa3BLJbeXhhGQJVONJQ2qHRR-vHJgzElG1rnjiN69T9185uVNlkl4CY97Wpe5dbfAA"
+          src="/girl-pho2.jpg"
           alt="Cá Tính"
           referrerPolicy="no-referrer"
         />
@@ -100,7 +100,7 @@ const BentoGrid = () => (
         <div className="group relative aspect-square bg-stone-900 overflow-hidden">
           <img 
             className="w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-105" 
-            src="https://lh3.googleusercontent.com/aida/ADBb0uhZo4eYkBZII3vosvuZ-sN_ttyoELp3kLtH_zMFLCygzYp50NpPrdUUpFUWHkjRaR33kApN_QIlwyIrL613BTf0mHE9E3tN4-LOEXpLWUsiazmh2zqvsCKpjT_RgbDS9qxKc1kN78gJpoS3zT0KrWTN48Y6ycrgzbnEIeTdw4ogDnRDsOUAgacrPyD5k2o-gEBa_dv05YXHg9kjePSD47dgr8SeShFpjLYy2LGrzNQ5_57IImgmzdNmhY588r30mEjAo-_F_rBMhg"
+            src="/girl-pho3.jpg"
             alt="Summer Girl"
             referrerPolicy="no-referrer"
           />
@@ -111,7 +111,7 @@ const BentoGrid = () => (
         <div className="group relative aspect-square bg-stone-900 overflow-hidden">
           <img 
             className="w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-105" 
-            src="https://lh3.googleusercontent.com/aida/ADBb0ujTsZ_KZarXv3DtdyCW4Af7FerVLFpRD2UMz1LTZCgu5Jn6sc9-9B546nfNj-WMmVxTP8q5sqJTzpYQN8bMWjlJdk8U48Ft0lurO2bVmybaDH8iudcRwraNw4Py4seN4HNJ9Xie3_KAuIQZnlcwFnoyoS4R1YiTzWPpUx_X_TVxXtlr7kTS-VRPq1RXbcWtif6eSyGsgAKru1Qe302FUzCca-V3HdfztPsajXBoisUmeaRpHO2uYq-SJ2tJP1P71iTbSdRc_XXK7g"
+            src="/girl-pho4.jpg"
             alt="Anime's Girl"
             referrerPolicy="no-referrer"
           />
@@ -183,7 +183,7 @@ const ProjectGallery = () => (
         <div className="relative overflow-hidden mb-6 aspect-[3/4] rounded-sm">
           <img 
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
-            src="https://lh3.googleusercontent.com/aida/ADBb0uhx5pdrVsTzzVxq5L0bZ_eLbzlQOrm7jHInzA4PyHsGDPFFsvOBKpYnqXwRyFU_7vcsoUUxW22Hft5KXKXZCPOFZVRCwKhdZeAheUHDg4R004HX4axmYhHn2llYZaO9VkueIpIR-QYrQwvLS-rPi0bU-YIm6b1sHr8FvsHZneac2WxbuHXueyfOzoq5_L8HnF7S49FPAfkmeum8I1ry9mRpZtXTzvBUrYl21clrPea9NmvWtbEForxorlRen3WAyZp_tWtWmeAWPg"
+            src="/girl-pho5.jpg"
             alt="Project 01"
             referrerPolicy="no-referrer"
           />
