@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Play, ArrowRight, Grid, History, BookOpen, Info } from 'lucide-react';
+import { Menu, X, Play, ArrowRight, Grid, History, BookOpen, Info, ArrowLeft } from 'lucide-react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 // --- Components ---
 
@@ -75,54 +76,82 @@ const Hero = ({ onExplore }: { onExplore: () => void }) => (
   </section>
 );
 
-const BentoGrid = () => (
-  <section className="bg-surface px-6 py-24 space-y-12">
-    <div className="flex flex-col gap-4">
-      <h2 className="font-serif text-4xl text-primary tracking-tight">CÁ TÍNH</h2>
-      <div className="w-12 h-[1px] bg-white/10"></div>
+const CategoryGallery = ({ title, images }: { title: string, images: string[] }) => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
+    <div className="pt-32 pb-32 px-6 min-h-screen bg-surface">
+      <button 
+        onClick={() => navigate(-1)} 
+        className="mb-12 flex items-center gap-2 text-[10px] tracking-widest uppercase text-primary border-b border-primary/30 pb-1 hover:border-primary transition-colors cursor-pointer"
+      >
+        <ArrowLeft size={14} /> BACK
+      </button>
+      <h2 className="font-serif text-5xl mb-16 italic text-primary">{title}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {images.map((img, i) => (
+          <div key={i} className="aspect-[3/4] overflow-hidden bg-stone-900 rounded-sm">
+            <img src={img} className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" alt={`${title} ${i + 1}`} />
+          </div>
+        ))}
+      </div>
     </div>
-    
-    <div className="grid grid-cols-1 gap-6">
-      <div className="group relative aspect-[4/5] bg-stone-900 overflow-hidden">
-        <img 
-          className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" 
-          src="/girl-pho2.jpg"
-          alt="Cá Tính"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
-          <span className="text-[10px] tracking-[0.2em] text-primary uppercase mb-2">NHÂN CÁCH 01</span>
-          <h3 className="font-serif text-2xl text-on-surface italic">Girl Phố Cá Tính</h3>
-        </div>
+  )
+};
+
+const BentoGrid = () => {
+  const navigate = useNavigate();
+  return (
+    <section className="bg-surface px-6 py-24 space-y-12">
+      <div className="flex flex-col gap-4">
+        <h2 className="font-serif text-4xl text-primary tracking-tight">CÁ TÍNH</h2>
+        <div className="w-12 h-[1px] bg-white/10"></div>
       </div>
       
-      <div className="grid grid-cols-2 gap-6">
-        <div className="group relative aspect-square bg-stone-900 overflow-hidden">
+      <div className="grid grid-cols-1 gap-6">
+        <div onClick={() => navigate('/girl-pho')} className="group relative aspect-[4/5] bg-stone-900 overflow-hidden cursor-pointer">
           <img 
-            className="w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-105" 
-            src="/girl-pho3.jpg"
-            alt="Summer Girl"
+            className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" 
+            src="/girl-pho2.jpg"
+            alt="Cá Tính"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 p-4 flex flex-col justify-end bg-gradient-to-t from-surface/80 to-transparent">
-            <h3 className="font-serif text-lg text-on-surface">Summer Girl</h3>
+          <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+            <span className="text-[10px] tracking-[0.2em] text-primary uppercase mb-2">NHÂN CÁCH 01</span>
+            <h3 className="font-serif text-2xl text-on-surface italic">Girl Phố Cá Tính</h3>
           </div>
         </div>
-        <div className="group relative aspect-square bg-stone-900 overflow-hidden">
-          <img 
-            className="w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-105" 
-            src="/girl-pho4.jpg"
-            alt="Anime's Girl"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 p-4 flex flex-col justify-end bg-gradient-to-t from-surface/80 to-transparent">
-            <h3 className="font-serif text-lg text-on-surface">Anime's Girl</h3>
+        
+        <div className="grid grid-cols-2 gap-6">
+          <div onClick={() => navigate('/summer-girl')} className="group relative aspect-square bg-stone-900 overflow-hidden cursor-pointer">
+            <img 
+              className="w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-105" 
+              src="/girl-pho3.jpg"
+              alt="Summer Girl"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 p-4 flex flex-col justify-end bg-gradient-to-t from-surface/80 to-transparent">
+              <h3 className="font-serif text-lg text-on-surface">Summer Girl</h3>
+            </div>
+          </div>
+          <div onClick={() => navigate('/anime-girl')} className="group relative aspect-square bg-stone-900 overflow-hidden cursor-pointer">
+            <img 
+              className="w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-105" 
+              src="/girl-pho4.jpg"
+              alt="Anime's Girl"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 p-4 flex flex-col justify-end bg-gradient-to-t from-surface/80 to-transparent">
+              <h3 className="font-serif text-lg text-on-surface">Anime's Girl</h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const Newsletter = () => (
   <section className="bg-surface py-32 px-6">
@@ -310,31 +339,38 @@ export default function App() {
       <MenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       
       <main className="pb-20">
-        <AnimatePresence mode="wait">
-          {view === 'home' ? (
-            <motion.div
-              key="home"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Hero onExplore={() => { setView('gallery'); setActiveTab('home'); }} />
-              <BentoGrid />
-              <Newsletter />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="gallery"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <ProjectGallery />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <Routes>
+          <Route path="/" element={
+            <AnimatePresence mode="wait">
+              {view === 'home' ? (
+                <motion.div
+                  key="home"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Hero onExplore={() => { setView('gallery'); setActiveTab('home'); }} />
+                  <BentoGrid />
+                  <Newsletter />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="gallery"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <ProjectGallery />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          } />
+          <Route path="/girl-pho" element={<CategoryGallery title="Girl Phố Cá Tính" images={['/girl-pho1.jpg', '/girl-pho2.jpg']} />} />
+          <Route path="/summer-girl" element={<CategoryGallery title="Summer Girl" images={['/girl-pho3.jpg', '/girl-pho4.jpg']} />} />
+          <Route path="/anime-girl" element={<CategoryGallery title="Anime's Girl" images={['/girl-pho5.jpg', '/girl-pho6.jpg']} />} />
+        </Routes>
       </main>
 
       <Footer />
