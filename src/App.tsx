@@ -128,7 +128,7 @@ const BentoGrid = () => {
           <div onClick={() => navigate('/summer-girl')} className="group relative aspect-square bg-stone-900 overflow-hidden cursor-pointer">
             <img
               className="w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-105"
-              src="/girl-pho3.jpg"
+              src="/summer-girl1.jpg"
               alt="Summer Girl"
               referrerPolicy="no-referrer"
             />
@@ -139,7 +139,7 @@ const BentoGrid = () => {
           <div onClick={() => navigate('/anime-girl')} className="group relative aspect-square bg-stone-900 overflow-hidden cursor-pointer">
             <img
               className="w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-105"
-              src="/girl-pho4.jpg"
+              src="/anime-girl1.jpg"
               alt="Anime's Girl"
               referrerPolicy="no-referrer"
             />
